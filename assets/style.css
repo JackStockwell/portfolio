@@ -28,10 +28,11 @@ header {
     justify-content: space-between;
     position: fixed;
     top: 0;
-    background-color: #8c1eff;
+    background-color: #b269ff;
     padding: 10px;
     width: 100%;
-    border-bottom: 5px solid #c724b1;
+    max-block-size: 100px;
+    border-bottom: 5px solid #8c1eff;
 }
 
 header h1 {
@@ -41,16 +42,22 @@ header h1 {
 
 nav {
     display: inline-flex;
-    margin: 0 30px 0 0;
+    padding: 0 30px 0 30px;
     justify-content: center;
 }
 
 header a {
-    margin: 0 10px 0 10px;
-    gap: 10px 20px;
-    border: 2px solid black;
-    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+    gap: 20px 30px;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 2px;
+    color: #000000;
+    
+}
 
+header a:hover {
+    background-color: #58a7af;
 }
 
 
@@ -59,22 +66,38 @@ header a {
 body {
     display: block;
     margin: 0;
-    background-color: #3a3a59;
+    background-color: #71dbd4;
 }
 
 /* Main Content */
 
 main {
     display: block;
-    margin-top: 200px;
+    position: relative;
+    margin-top: 100px;
 }
 
 section {
     display: flex;
+    width: 80%;
+    justify-content: center;
+    border: 2px solid black;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #ff901f;
 
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #3a3a59;
 }
 
 /* Media Queries */
@@ -82,18 +105,20 @@ section {
 @media screen and (max-width: 992px) {
     header {
         flex-direction: column;
-        block-size: auto;
+
     }
     
     header h1 {
         margin: 0;
+        text-size-adjust: 0.8
     }
 
     nav {
         margin: 0;
+        width: 100%;
     }
 
     header a {
-        flex: 0 3 0;
+
     }
 }
