@@ -7,8 +7,10 @@
 /* Body Content */
 
 body {
-    display: block;
+    flex-flow: row wrap;
+    align-content: flex-start;
     margin: 0;
+    padding: ;
     background-color: #71dbd4;
 }
 
@@ -72,7 +74,6 @@ header a:hover {
 /* Hero */
 
 .hero {
-    display: flex;
     margin-left: auto;
     margin-right: auto;
     max-height: 650px;
@@ -87,10 +88,10 @@ header a:hover {
 /* Aside */
 
 aside {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    position: flex;
+    flex-flow: column nowrap;
     float: left;
+    background-color: #b269ff;
 }
 
 .who {
@@ -100,13 +101,14 @@ aside {
 /* Main Content */
 
 main {
+    align-self: flex-start;
     display: flex;
     padding: 1% 0 0 0;
     flex-direction: column;
     position: relative;
 }
-
-section {
+/*
+section, article {
     display: flex;
     width: 80%;
     justify-content: center;
@@ -117,7 +119,7 @@ section {
     background-color: #ff901f;
 
 }
-
+*/
 /* Footer */
 
 footer {
