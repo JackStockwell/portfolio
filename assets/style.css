@@ -7,10 +7,9 @@
 /* Body Content */
 
 body {
-    flex-flow: row wrap;
-    align-content: flex-start;
+    box-sizing: border-box;
     margin: 0;
-    padding: ;
+    padding: 0;
     background-color: #71dbd4;
 }
 
@@ -35,6 +34,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    order: 1;
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -74,39 +74,50 @@ header a:hover {
 /* Hero */
 
 .hero {
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     max-height: 650px;
+    max-width: 2000px;
     width: 100%;
-    max-width: 1800px;
     object-fit: cover;
     object-position: center;
-    flex: 0 3 0;
+    order: 2;
 
 }
 
 /* Aside */
 
 aside {
-    position: flex;
-    flex-flow: column nowrap;
-    float: left;
+    display: inline-flex;
     background-color: #b269ff;
-}
-
-.who {
-    order: 1;
+    align-self: flex-start;
 }
 
 /* Main Content */
 
-main {
-    align-self: flex-start;
+.content {
     display: flex;
-    padding: 1% 0 0 0;
-    flex-direction: column;
-    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
+
+main {
+    align-self: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 60vw;
+    padding: 0 0 0 1%;
+    flex-direction: column;
+}
+ 
+/* Article */
+
+.aboutme {
+    align-self: center;
+}
+
 /*
 section, article {
     display: flex;
