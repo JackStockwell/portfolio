@@ -4,29 +4,30 @@
     margin: 0;
 }
 
+:root {
+    --dark: #264653;
+    --primary2nd: #58a7af;
+    --background: #ccc;
+}
+
+/* Colours */
+
+test {
+    color: #264653;
+    color: #2a9d8f;
+    color: #e9c46a;
+    color: #f4a261;
+    color: #e76f51;
+}
+
 /* Body Content */
 
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #71dbd4;
+    background-color: var(--background);
 }
-
-/* Colors */
-
-    test {
-        color: #ffd319;
-        color: #ff901f;
-        color: #ff2975;
-        color: #f222ff;
-        color: #8c1eff;
-        color: #c724b1;
-        color: #71dbd4;
-        color: #b3b0c4;
-        color: #58a7af;
-        color: #3a3a59;
-    }
 
 /* Header and Nav */
 
@@ -38,10 +39,10 @@ header {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color: #b269ff;
+    background-color: var(--dark);
     padding: 10px;
     width: 100%;
-    border-bottom: 5px solid #8c1eff;
+    border-bottom: 5px solid var(--primary2nd);
 }
 
 header h1 {
@@ -64,11 +65,12 @@ header a {
     text-decoration: none;
     margin: 2px;
     color: #000000;
+    border: 2px solid black;
     
 }
 
 header a:hover {
-    background-color: #58a7af;
+    background-color: var(--primary2nd);
 }
 
 /* Hero */
@@ -82,6 +84,7 @@ header a:hover {
     object-fit: cover;
     object-position: center;
     order: 2;
+    border-bottom: 5px solid var(--primary2nd);
 
 }
 
