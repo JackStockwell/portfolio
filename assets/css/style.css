@@ -65,7 +65,8 @@ header a {
     text-decoration: none;
     margin: 2px;
     color: #000000;
-    border: 2px solid black;
+    border-bottom: 5px solid var(--primary2nd);
+
     
 }
 
@@ -85,7 +86,6 @@ header a:hover {
     object-position: center;
     order: 2;
     border-bottom: 5px solid var(--primary2nd);
-
 }
 
 /* Main*/
@@ -94,7 +94,6 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: stretch;
     padding: 1% 0 0 0;
 }
 
@@ -102,11 +101,27 @@ main {
 
 .aboutme {
     align-self: center;
-    display: inline-block;
-    flex-flow: row wrap;
+    display: inline-flex;
+    flex-flow: row warp;
+    align-content: center;
     width: 70vw;
-    flex-direction: column;
+    flex-direction: row;
 }
+
+.aboutme h2 {
+    padding: 1%;
+    border-right: 5px solid var(--primary2nd);
+    align-self: stretch;
+    text-align: right;
+    flex: 1 0 auto;
+}
+
+.aboutme p {
+    flex-grow: 4;
+    padding: 1%;
+}
+
+
 
 /* Footer */
 
@@ -137,6 +152,15 @@ footer {
         flex-direction: column;
     }
 
+    .aboutme {
+        flex-flow: column nowrap;
+    }
+
+    .aboutme h2 {
+        text-align: center;
+        border-bottom: 5px solid var(--primary2nd);
+        border-right: 0px;
+    }
 }
 
 @media screen and (max-width:772) {
