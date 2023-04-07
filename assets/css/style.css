@@ -46,7 +46,7 @@ header {
 }
 
 header h1 {
-    font-size: 200%;
+    font-size: 3vmin;
     margin: 0 0 0 30px;
     text-transform: uppercase;
 }
@@ -94,34 +94,54 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 1% 0 0 0;
+    align-content: center;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black
 }
 
-/* Content */
+/* About Me*/
 
 .aboutme {
     align-self: center;
-    display: inline-flex;
-    flex-flow: row warp;
-    align-content: center;
-    width: 70vw;
+    display: flex;
+    flex-flow: row nowrap;
     flex-direction: row;
 }
 
 .aboutme h2 {
-    padding: 1%;
+    padding: 3%;
     border-right: 5px solid var(--primary2nd);
-    align-self: stretch;
     text-align: right;
-    flex: 1 0 auto;
+    display: block;
+    width: 100%;
 }
 
 .aboutme p {
-    flex-grow: 4;
     padding: 1%;
 }
 
+/* Projects */
 
+.projects {
+    align-self: center;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-direction: row;
+}
+
+.projects h2 {
+    padding: 3%;
+    border-right: 5px solid var(--primary2nd);
+    text-align: right;
+    display: block;
+    width: 100%;
+}
+
+.projects p {
+    padding: 1%;
+}
 
 /* Footer */
 
@@ -145,12 +165,14 @@ footer {
 
     header h1 {
         margin: 0;
-        font-size: 1.5em;
+
     }
 
     main {
         flex-direction: column;
     }
+
+    /* About me */
 
     .aboutme {
         flex-flow: column nowrap;
@@ -158,6 +180,20 @@ footer {
 
     .aboutme h2 {
         text-align: center;
+        padding: 3%;
+        border-bottom: 5px solid var(--primary2nd);
+        border-right: 0px;
+    }
+
+    /* Projects */
+
+    .projects {
+        flex-flow: column nowrap;
+    }
+
+    .projects h2 {
+        text-align: center;
+        padding: 3%;
         border-bottom: 5px solid var(--primary2nd);
         border-right: 0px;
     }
