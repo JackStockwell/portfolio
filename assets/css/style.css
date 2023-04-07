@@ -144,23 +144,23 @@ main {
     padding: 1%;
 }
 
-/* Projects Cards */
+/* Project Cards */
 
 .cards {
     display: flex;
     flex-flow: row wrap;
-    object-fit: contain;
 }
 
 .cards img {
-    object-fit: contain;
-    min-width: 0;
-    max-width: auto;
-    flex: 1 2 0;
+    align-self: center;
+    flex: 1 0 0;
+    width: 40%;
+    border: 2px solid black;
+    margin: 3%;
 }
 
 .cards img:first-child{
-    flex: 2 0 0;
+    flex-grow: 1 0 0;
 }
 
 /* Footer */
