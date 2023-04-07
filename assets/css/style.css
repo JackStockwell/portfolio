@@ -115,7 +115,7 @@ main {
     border-right: 5px solid var(--primary2nd);
     text-align: right;
     display: block;
-    width: 100%;
+    flex: 0 0 20%;
 }
 
 .aboutme p {
@@ -129,6 +129,7 @@ main {
     display: flex;
     flex-flow: row nowrap;
     flex-direction: row;
+    width: 100%;
 }
 
 .projects h2 {
@@ -136,11 +137,30 @@ main {
     border-right: 5px solid var(--primary2nd);
     text-align: right;
     display: block;
-    width: 100%;
+    flex: 0 0 20%;
 }
 
 .projects p {
     padding: 1%;
+}
+
+/* Project Cards */
+
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cards img {
+    align-self: center;
+    flex: 1 0 0;
+    width: 40%;
+    border: 2px solid black;
+    margin: 3%;
+}
+
+.cards img:first-child{
+    flex-grow: 1 0 0;
 }
 
 /* Footer */
