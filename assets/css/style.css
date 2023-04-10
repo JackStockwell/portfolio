@@ -11,6 +11,7 @@
     --background: #ccc;
 }
 
+
 /* Colours */
 
 test {
@@ -49,16 +50,17 @@ header {
     border-bottom: 5px solid var(--primary2nd);
 }
 
-header h1 {
+header h1 a{
     color: var(--primary2nd);
     font-size: 4vmin;
     padding: 5px;
     margin: 5px;
+    text-decoration: none;
     text-transform: uppercase;
     font-family: 'Monsterrat', sans-serif;
 }
 
-header h1::after {
+header h1 a::after {
     font-family: 'Monsterrat', sans-serif;
     color: var(--dark);
     font-size: 4vmin;
@@ -71,7 +73,7 @@ header h1::after {
     transition: box-shadow .3s ease-in-out
 }
 
-header h1:hover::after {
+header h1 a:hover::after {
     color: var(--primary2nd);
     box-shadow: inset 0 100px 0 0 var(--dark);
 }
@@ -81,7 +83,7 @@ nav {
     justify-content: center;
 }
 
-header a {
+header nav a {
     flex-grow: 1;
     align-items: center;
     padding: 10px 10px 10px 10px;
@@ -99,7 +101,7 @@ header a {
     
 }
 
-header a:hover {
+header nav a:hover {
     box-shadow: inset 0 -100px 0 0 var(--primary2nd);
     color: var(--dark)
 }
