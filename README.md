@@ -9,5 +9,7 @@ Jack Stockwell's personal portfolio.
 
 [A complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - For the use and understand of FlexBox.
 
+[Hover Nav Guide](https://css-tricks.com/css-link-hover-effects/)
+
 
 
