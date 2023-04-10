@@ -11,5 +11,7 @@ Jack Stockwell's personal portfolio.
 
 [Hover Nav Guide](https://css-tricks.com/css-link-hover-effects/)
 
+[Help with Pseudo Classes](https://stackoverflow.com/questions/13233991/combine-after-with-hover)
+
 
 
