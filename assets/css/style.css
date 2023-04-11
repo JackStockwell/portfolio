@@ -173,65 +173,45 @@ h2 {
     flex: 1 0 30%;
     max-width: 30%;
 }
-/* Project Cards */
+/* Projects Cards */
 
 .cards {
     display: grid;
+    margin: 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
 }
 
-/*
+figure {
+    border: 3px solid var(--primary2nd);
+    box-shadow: 1ch 1ch var(--dark);
+}
 
-.cards figure {
-    flex: 1 1 0;
-    display: flex;
-    flex-flow: column wrap;
+/* Top Image Span */
+
+.span-2 {
+    grid-column: span 2;
+}
+
+
+.cards img {
+    max-width: 100%;
+    filter: grayscale(.5);
+    aspect-ratio: 16 / 9;
+    transition: all .4s ease-in-out;
+}
+
+figure a{
+    display: block;
 }
 
 .firstimg {
     width: 100%;
 }
 
-.cards img {
-    flex: 1 1 0;
-    aspect-ratio: 16 / 9;
-    border: 3px solid black;
-    max-width: 100%;
-    object-fit: cover;
-    top: 0;
+.cards img:hover {
+    filter: grayscale(1) blur(3px);
 }
-/*
-.firstimg img {
-    width: 100%;
-    max-width: 100%;
-    border: 5px solid #e76f51;
-}
-
-/*
-.cards img {
-    display: flex;
-    position: relative;
-    flex-flow: row wrap;
-    object-position: top;
-    justify-content: center;
-    flex: 1 1 0;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    width: 40%;
-    border: 2px solid var(--dark);
-    margin: 3%;
-    filter: saturate(0.5);
-    transition: all 1s ease
-}
- 
-.cards img:first-child {
-    width: 90%;
-}
-
-.cardfig:hover .overlay{
-    opacity: 1;
-    filter: saturate(1);
-}
-
 
 /* Overlay Text */
 /*
