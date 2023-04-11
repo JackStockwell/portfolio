@@ -163,7 +163,7 @@ main {
 
 .portrait {
     min-width: 0;
-    margin: 0 1rem;
+    margin: 0 1rem 1rem 1rem;
     border: 3px solid var(--primary2nd);
     box-shadow: 1ch 1ch var(--dark);
     max-height: 150rem;
@@ -181,7 +181,7 @@ main {
 
 .cards {
     display: grid;
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
 }
