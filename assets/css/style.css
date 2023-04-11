@@ -52,7 +52,7 @@ header {
 
 header h1 a{
     color: var(--primary2nd);
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding: 5px 0 5px 5px;
     text-decoration: none;
     text-transform: uppercase;
@@ -95,8 +95,6 @@ header nav a {
     border-bottom: 5px solid var(--primary2nd);
     transition: color .5 ease-in-out;
     transition: box-shadow .3s ease-in-out;
-
-    
 }
 
 header nav a:hover {
@@ -113,6 +111,7 @@ header nav a:hover {
     margin-bottom: 3rem;
     max-height: 450px;
     width: 100%;
+    top: 0;
     object-fit: cover;
     object-position: center;
     order: 2;
@@ -131,10 +130,9 @@ main {
     margin-right: auto;
 }
 
-h2 {
+h2, h3, h4 {
     font-family: var(--headerfont);
     text-transform: uppercase;
-    font-size: 2.5rem;
 }
 
 /* About Me*/
@@ -145,12 +143,18 @@ h2 {
     width: 100%;
 }
 
-.aboutme h2 {
+img {
+    min-width: 0;
     padding: 1rem;
+}
+
+.aboutme h3 {
+    padding: 1rem;
+    font-size: 2rem;
     border-right: 5px solid var(--primary2nd);
     text-align: right;
-    flex: 1 0 30%;
-    max-width: 30%;
+    flex: 1 0 20%;
+    max-width: 20%;
 }
 
 .aboutme p {
@@ -166,12 +170,13 @@ h2 {
     width: 100%;
 }
 
-.projects h2 {
+.projects h3 {
     padding: 1rem;
+    font-size: 2rem;
     border-right: 5px solid var(--primary2nd);
     text-align: right;
-    flex: 1 0 30%;
-    max-width: 30%;
+    flex: 1 0 20%;
+    max-width: 20%;
 }
 /* Project Cards */
 
@@ -183,6 +188,8 @@ h2 {
 }
 
 figure {
+    display: flex;
+    position: relative;
     border: 3px solid var(--primary2nd);
     box-shadow: 1ch 1ch var(--dark);
 }
@@ -193,24 +200,45 @@ figure {
     grid-column: span 2;
 }
 
+/* Card Images */
 
 .cards img {
     max-width: 100%;
     filter: grayscale(.5);
     aspect-ratio: 16 / 9;
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
-figure a{
-    display: block;
+.overlay {
+    opacity: 0;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    min-width: 0;
+    flex: 1 1 auto;
+    font-size: 20px;
+    text-decoration: none;
+    transition: filter .3s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
+
 }
 
-.firstimg {
-    width: 100%;
+.overlay > * {
+    font-size: 2rem;
+    color: var(--primary2nd);
+    padding: 1ch;
+    box-shadow: inset 0 0 0 0 var(--dark);
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.cards img:hover {
+figure:hover img {
     filter: grayscale(1) blur(3px);
+}
+
+figure:hover .overlay {
+    opacity: 1;
+    box-shadow: inset 500px 0 0 0 var(--dark);
 }
 
 /* Overlay Text */
@@ -274,7 +302,7 @@ footer {
         flex-flow: column nowrap;
     }
 
-    .aboutme h2 {
+    .aboutme h3 {
         text-align: center;
         padding: 3%;
         border-bottom: 5px solid var(--primary2nd);
@@ -288,7 +316,7 @@ footer {
         flex-flow: column nowrap;
     }
 
-    .projects h2 {
+    .projects h3 {
         text-align: center;
         padding: 3%;
         border-bottom: 5px solid var(--primary2nd);
@@ -297,6 +325,7 @@ footer {
     }
 
     .cards {
+        display: flex;
         flex-flow: column nowrap;
     }
 }
