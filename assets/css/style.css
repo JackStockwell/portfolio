@@ -13,6 +13,7 @@ html {
     --dark: #264653;
     --primary2nd: #58a7af;
     --background: #ccc;
+    --blur: blur(5px);
     --headerfont: 'Monsterrat', sans-serif;
 }
 
@@ -164,6 +165,7 @@ h2 {
 .projects {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
     width: 100%;
 }
 
@@ -184,24 +186,34 @@ h2 {
 
 figure {
     position: relative;
-    text-align: center;
+    display: flex;
 }
 
 /* Overlay Text */
 
 .overlay {
     position: absolute;
-    text-align: center;
+    display: flex;
+    opacity: 0;
+    top: 50%;
+    left: 50;
+    padding: 30px;
+    color: var(--primary2nd);
+    background-color: var(--dark);
     text-transform: uppercase;
+    text-decoration: none;
     box-shadow: inset 0 0 0 0 var(--primary2nd);
     border-bottom: 5px solid var(--primary2nd);
     transition: color .5 ease-in-out;
     transition: box-shadow .3s ease-in-out;
     font-size: 2em;
+    flex: 1 2 0;
 }
 
-.overlay:hover{
-    box-shadow: inset 0 -100px 0 0 var(--primary2nd);
+.overlay:hover {
+    display: flex;
+    box-shadow: inset 0 -200px 0 0 var(--primary2nd);
+    color: var(--dark);
 }
 
 
@@ -226,7 +238,8 @@ figure {
     width: 90%;
 }
 
-.cards img:hover {
+.cardimg:hover .overlay{
+    opacity: 1;
     filter: saturate(1);
 }
 
