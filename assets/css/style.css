@@ -1,12 +1,9 @@
-html {
-    font-size: 12px;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Signika Negative', sans-serif;
+    font-size: 16px;
 }
 
 :root {
@@ -55,7 +52,7 @@ header {
 
 header h1 a{
     color: var(--primary2nd);
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 5px 0 5px 5px;
     text-decoration: none;
     text-transform: uppercase;
@@ -90,7 +87,7 @@ header nav a {
     align-items: center;
     padding: 10px;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     margin: 10px;
     color: var(--primary2nd);
@@ -152,12 +149,12 @@ h2 {
     padding: 1rem;
     border-right: 5px solid var(--primary2nd);
     text-align: right;
-    min-width: 30%;
+    flex: 1 0 30%;
+    max-width: 30%;
 }
 
 .aboutme p {
     padding: 1rem;
-    flex: 1 1 75%
 }
 
 /* Projects */
@@ -173,33 +170,40 @@ h2 {
     padding: 1rem;
     border-right: 5px solid var(--primary2nd);
     text-align: right;
-    min-width: 30%;
+    flex: 1 0 30%;
+    max-width: 30%;
 }
 /* Project Cards */
 
 .cards {
-    display: flex;
-
-    margin: 1rem;
+    display: grid;
 }
+
 /*
+
 .cards figure {
+    flex: 1 1 0;
     display: flex;
-    justify-content: center;
     flex-flow: column wrap;
 }
-*/
-figure img {
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1 1 0;
-    min-width: 300px;
-    max-width: 100%;
-    border: 3px solid black;
+
+.firstimg {
+    width: 100%;
 }
 
-.cards:first-child {
+.cards img {
+    flex: 1 1 0;
+    aspect-ratio: 16 / 9;
+    border: 3px solid black;
+    max-width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+/*
+.firstimg img {
     width: 100%;
+    max-width: 100%;
+    border: 5px solid #e76f51;
 }
 
 /*
@@ -270,7 +274,7 @@ footer {
 
 /* Media Queries */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1092px) {
     header {
         flex-direction: column;
 
@@ -296,6 +300,7 @@ footer {
         padding: 3%;
         border-bottom: 5px solid var(--primary2nd);
         border-right: 0px;
+        max-width: 100%;
     }
 
     /* Projects */
@@ -309,6 +314,7 @@ footer {
         padding: 3%;
         border-bottom: 5px solid var(--primary2nd);
         border-right: 0px;
+        max-width: 100%;
     }
 
     .cards {
