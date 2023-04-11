@@ -9,7 +9,8 @@
 :root {
     --dark: #264653;
     --primary2nd: #58a7af;
-    --background: #ccc;
+    --light: #f1f1f1;
+    --background: linear-gradient(90deg, rgba(38,70,83,1) 0%, rgb(136, 170, 166) 50%, rgba(38,70,83,1) 100%);
     --blur: blur(5px);
     --headerfont: 'Monsterrat', sans-serif;
 }
@@ -31,8 +32,15 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--background);
+    background: var(--background);
+    color: #fff;
 }
+
+h2, h3, h4 {
+    font-family: var(--headerfont);
+    text-transform: uppercase;
+}
+
 
 /* Header and Nav */
 
@@ -118,7 +126,7 @@ header nav a:hover {
     border-bottom: 5px solid var(--primary2nd);
 }
 
-/* Main*/
+/* Main */
 
 main {
     display: flex;
@@ -131,28 +139,10 @@ main {
     margin-right: auto;
 }
 
-h2, h3, h4 {
-    font-family: var(--headerfont);
-    text-transform: uppercase;
-}
-
-/* About Me*/
-
-.aboutme {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: 100%;
-}
-
-.portrait {
-    min-width: 0;
-    padding: 1rem;
-}
-
 .aboutme h3,
-.projects h3 {
-    padding: 1rem 1rem 0 0;
+.projects h3,
+.contactme h3 {
+    padding: 0 1rem;
     font-size: 2rem;
     border-right: 5px solid var(--primary2nd);
     text-align: right;
@@ -160,17 +150,31 @@ h2, h3, h4 {
     max-width: 20%;
 }
 
-.aboutme p {
-    padding: 1rem;
-}
-
-/* Projects */
-
-.projects {
+.aboutme,
+.projects,
+.contactme {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     width: 100%;
+}
+
+/* About Me*/
+
+.portrait {
+    min-width: 0;
+    margin: 0 1rem;
+    border: 3px solid var(--primary2nd);
+    box-shadow: 1ch 1ch var(--dark);
+    max-height: 150rem;
+}
+
+.aboutme h4 {
+    margin-bottom: 1rem;
+}
+
+.aboutme article {
+    padding: 1rem;
 }
 
 /* Project Cards */
@@ -217,7 +221,6 @@ figure {
     padding: 1ch;
     box-shadow: inset 0 0 0 0 var(--dark);
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 figure:hover img,
@@ -246,15 +249,37 @@ figure:active img {
     padding: 1ch;
     box-shadow: inset 0 0 0 0 var(--dark);
     text-decoration: none;
-    text-transform: uppercase;
 }
-
 
 figure:hover .overlay, 
 figure:hover .overlay-first {
     opacity: 1;
     box-shadow: inset 500px 0 0 0 var(--dark);
 }
+
+/* Contact Me */
+
+.contactme {
+    justify-content: flex-start;
+
+}
+
+.contactme article {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 0 1rem;
+    min-width: 80%;
+}
+
+.contactme article p {
+    font-size: 200%;
+}
+
+.contactme article ul {
+    margin-left: 1rem;
+}
+
 
 /* Footer */
 
@@ -284,13 +309,17 @@ footer {
         flex-direction: column;
     }
 
-    /* About me */
+    /* Content */
 
-    .aboutme {
+    .aboutme,
+    .projects,
+    .contactme {
         flex-flow: column nowrap;
     }
 
-    .aboutme h3 {
+    .aboutme h3,
+    .projects h3,
+    .contactme h3 {
         text-align: center;
         padding: 3%;
         border-bottom: 5px solid var(--primary2nd);
@@ -299,18 +328,6 @@ footer {
     }
 
     /* Projects */
-
-    .projects {
-        flex-flow: column nowrap;
-    }
-
-    .projects h3 {
-        text-align: center;
-        padding: 3%;
-        border-bottom: 5px solid var(--primary2nd);
-        border-right: 0px;
-        max-width: 100%;
-    }
 
     .cards {
         display: flex;
@@ -334,8 +351,7 @@ footer {
         color: var(--primary2nd);
         padding: 1ch;
         box-shadow: inset 500px 0 0 0 var(--dark);
-        text-decoration: none;
-        text-transform: uppercase;    
+        text-decoration: none;  
     }
 
 }
