@@ -9,9 +9,9 @@ Jack Stockwell's personal portfolio.
 
 [A complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - For the use and understand of FlexBox.
 
-[Hover Nav Guide](https://css-tricks.com/css-link-hover-effects/)
+[Hover Nav Guide](https://css-tricks.com/css-link-hover-effects/) - Used to create the animations along the nav bar.
 
-[Help with Pseudo Classes](https://stackoverflow.com/questions/13233991/combine-after-with-hover)
+[Help with Pseudo Classes](https://stackoverflow.com/questions/13233991/combine-after-with-hover) - Helped with selecting and determining the Pseudo Classes.
 
-
+[Learn CSS Grid](https://www.youtube.com/watch?v=rg7Fvvl3taU&t=1313s) - A Basic introduction tutorial video on Grid, was used to creat the projects flow.
 
