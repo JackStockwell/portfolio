@@ -172,15 +172,7 @@ h2, h3, h4 {
     justify-content: center;
     width: 100%;
 }
-/*
-.projects h3 {
-    padding: 1rem 1rem 0 0;
-    font-size: 2rem;
-    border-right: 5px solid var(--primary2nd);
-    text-align: right;
-    flex: 1 0 20%;
-    max-width: 20%;
-}
+
 /* Project Cards */
 
 .cards {
@@ -217,7 +209,6 @@ figure {
     top: 50%;
     transform: translate(-50%, -50%);
     min-width: 0;
-    flex: 1 1 auto;
     font-size: 1.25rem;
     text-decoration: none;
     transition: filter .3s ease-in-out;
@@ -247,7 +238,6 @@ figure:active img {
     bottom: 2rem;
     font-size: 1.75rem;
     min-width: 0;
-    flex: 1 1 auto;
     font-size: 1.75rem;
     text-decoration: none;
     transition: filter .3s ease-in-out;
@@ -333,6 +323,7 @@ footer {
         position: absolute;
         left: 50%;
         top: 50%;
+        bottom: unset;
         transform: translate(-50%, -50%);
         min-width: 0;
         flex: 1 1 auto;
@@ -344,7 +335,7 @@ footer {
         padding: 1ch;
         box-shadow: inset 500px 0 0 0 var(--dark);
         text-decoration: none;
-        text-transform: uppercase;        
+        text-transform: uppercase;    
     }
 
 }
