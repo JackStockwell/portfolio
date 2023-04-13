@@ -166,7 +166,8 @@ main {
 
 .portrait {
     min-width: 0;
-    flex: 1 1 auto;
+    flex: 1 0 30%;
+    object-fit: contain;
     margin: var(--sectionmargin);
     border: 3px solid var(--primary2nd);
     box-shadow: 1ch 1ch var(--dark);
@@ -267,10 +268,16 @@ figure:hover .overlay-first {
     margin-bottom: 3rem;
 }
 
-.contactme article h4 {
+.contactme h4 {
     font-size: 1.5rem;
     text-align: center;
     width: 100%;
+}
+
+.socials-icons h4::before,
+.socials-icons h4::after {
+    content: '\2022';
+    padding: 0 1ch 0 1ch;
 }
 
 .contactme article {
@@ -282,21 +289,34 @@ figure:hover .overlay-first {
     min-width: 1fr;
 }
 
-/* Contact me list */
+/* Socials img list */
+
+.socials-icons {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
 
 .contact-icons {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
     width: 100%;
 }
 
+.contact-icons a {
+    text-decoration: none;
+    color: var(--light);
+}
+
 .contact-icons li {
-    flex: 1 1 200px;
+    flex: 1;
     list-style: none;
+    align-items: center;
     max-width: 100px;
 }
+
 
 .contact-icons li a img {
     width: 100%;
@@ -376,6 +396,10 @@ footer {
         padding: 1ch;
         box-shadow: inset 500px 0 0 0 var(--dark);
         text-decoration: none;  
+    }
+
+    .email form {
+        display: flex;
     }
 
 }
