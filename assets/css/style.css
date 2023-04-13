@@ -13,6 +13,7 @@
     --background: linear-gradient(90deg, rgba(38,70,83,1) 0%, rgb(136, 170, 166) 50%, rgba(38,70,83,1) 100%);
     --blur: blur(5px);
     --headerfont: 'Monsterrat', sans-serif;
+    --sectionmargin: 0 1.5rem 1.5rem 1.5rem;
 }
 
 
@@ -36,7 +37,7 @@ body {
     color: #fff;
 }
 
-h2, h3, h4 {
+h2, h3, h4, h5 {
     font-family: var(--headerfont);
     text-transform: uppercase;
 }
@@ -60,7 +61,7 @@ header {
 
 header h1 a{
     color: var(--primary2nd);
-    font-size: 2.5rem;
+    font-size: 2.5em;
     padding: 5px 0 5px 5px;
     text-decoration: none;
     text-transform: uppercase;
@@ -95,7 +96,7 @@ header nav a {
     align-items: center;
     padding: 10px;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     text-decoration: none;
     margin: 10px;
     color: var(--primary2nd);
@@ -139,11 +140,13 @@ main {
     margin-right: auto;
 }
 
+/* Sections */
+
 .aboutme h3,
 .projects h3,
 .contactme h3 {
     padding: 0 1rem;
-    font-size: 2rem;
+    font-size: clamp(1em, 1.5vw, 3em);
     border-right: 5px solid var(--primary2nd);
     text-align: right;
     flex: 1 0 20%;
@@ -163,10 +166,10 @@ main {
 
 .portrait {
     min-width: 0;
-    margin: 0 1rem 1rem 1rem;
+    flex: 1 1 auto;
+    margin: var(--sectionmargin);
     border: 3px solid var(--primary2nd);
     box-shadow: 1ch 1ch var(--dark);
-    max-height: 150rem;
 }
 
 .aboutme h4 {
@@ -181,7 +184,7 @@ main {
 
 .cards {
     display: grid;
-    margin: 0 1rem 1rem 1rem;
+    margin: var(--sectionmargin);
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
 }
@@ -261,25 +264,43 @@ figure:hover .overlay-first {
 
 .contactme {
     justify-content: flex-start;
+    margin-bottom: 3rem;
+}
 
+.contactme article h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
 }
 
 .contactme article {
+    flex: 1 1 auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    padding: 0 1rem;
-    min-width: 80%;
+    margin: var(--sectionmargin);
+    min-width: 1fr;
 }
 
-.contactme article p {
-    font-size: 200%;
+/* Contact me list */
+
+.contact-icons {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 1.5rem;
+    width: 100%;
 }
 
-.contactme article ul {
-    margin-left: 1rem;
+.contact-icons li {
+    flex: 1 1 200px;
+    list-style: none;
+    max-width: 100px;
 }
 
+.contact-icons li a img {
+    width: 100%;
+}
 
 /* Footer */
 
@@ -288,13 +309,15 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 20px;
-    background-color: #3a3a59;
-    color: #ccc;
+    background-color: var(--dark);
+    color: var(--light);
 }
+
+
 
 /* Media Queries */
 
-@media screen and (max-width: 1092px) {
+@media screen and (max-width: 992px) {
     header {
         flex-direction: column;
 
@@ -321,10 +344,11 @@ footer {
     .projects h3,
     .contactme h3 {
         text-align: center;
-        padding: 3%;
+        padding: 1rem;
         border-bottom: 5px solid var(--primary2nd);
         border-right: 0px;
         max-width: 100%;
+        margin-bottom: 1rem;
     }
 
     /* Projects */
