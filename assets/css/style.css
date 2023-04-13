@@ -37,31 +37,32 @@ body {
     color: #fff;
 }
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
     font-family: var(--headerfont);
     text-transform: uppercase;
 }
-
 
 /* Header and Nav */
 
 header {
     z-index: 2;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
     background-color: var(--dark);
     width: 100%;
-    padding: 1ch 10vw 1ch 10vw;
+    padding: 1ch 7vw;
     border-bottom: 5px solid var(--primary2nd);
 }
 
 nav {
     display: flex;
 }
+
+/* Header left */
 
 header h1 a{
     color: var(--primary2nd);
@@ -90,6 +91,8 @@ header h1 a:hover::after {
     box-shadow: inset 350px 0 0 0 var(--dark);
 }
 
+/* Header Right */
+
 header nav a {
     flex-grow: 1;
     align-items: center;
@@ -109,6 +112,7 @@ header nav a:hover {
     box-shadow: inset 0 -100px 0 0 var(--primary2nd);
     color: var(--dark)
 }
+
 
 /* Hero */
 
@@ -133,7 +137,7 @@ main {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    width: 85vw;
+    width: 90vw;
     max-width: 100rem;
     margin-left: auto;
     margin-right: auto;
@@ -163,24 +167,34 @@ main {
 
 /* About Me*/
 
-.portrait {
-    min-width: 0;
-    flex: 1 0 30%;
-    object-fit: contain;
-    margin: var(--sectionmargin);
-    border: 3px solid var(--primary2nd);
-    box-shadow: 1ch 1ch var(--dark);
+.aboutme {
+    align-items: stretch;
+}
+
+.aboutme article {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem;
 }
 
 .aboutme h4 {
     margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary2nd);
 }
 
 .aboutme article {
     padding: 1rem;
 }
 
-/* Project Cards */
+.portrait {
+    min-width: 0;
+    flex: 1 0 30%;
+    object-fit: contain;
+    margin: var(--sectionmargin);
+}
+
+
+/* My Project Cards */
 
 .cards {
     display: grid;
@@ -197,8 +211,6 @@ figure {
     text-align: center;
 }
 
-/* Card Images */
-
 .cards img {
     max-width: 100%;
     filter: grayscale(.5);
@@ -208,6 +220,30 @@ figure {
     object-position: top;
 }
 
+/* Top Image */
+
+.span-2 {
+    grid-column: span 2;
+}
+
+/* Overlay Affect */
+
+.overlay-first {
+    opacity: 0;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    font-size: 1.75rem;
+    min-width: 0;
+    font-size: 1.75rem;
+    text-decoration: none;
+    transition: filter .3s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
+    color: var(--primary2nd);
+    padding: 1ch;
+    box-shadow: inset 0 0 0 0 var(--dark);
+    text-decoration: none;
+}
 
 .overlay {
     opacity: 0;
@@ -226,32 +262,11 @@ figure {
     text-decoration: none;
 }
 
+/* Project Overlay Selectors */
+
 figure:hover img,
 figure:active img {
     filter: grayscale(1) blur(3px);
-}
-
-/* Top Image */
-
-.span-2 {
-    grid-column: span 2;
-}
-
-.overlay-first {
-    opacity: 0;
-    position: absolute;
-    left: 2rem;
-    bottom: 2rem;
-    font-size: 1.75rem;
-    min-width: 0;
-    font-size: 1.75rem;
-    text-decoration: none;
-    transition: filter .3s ease-in-out;
-    transition: box-shadow .3s ease-in-out;
-    color: var(--primary2nd);
-    padding: 1ch;
-    box-shadow: inset 0 0 0 0 var(--dark);
-    text-decoration: none;
 }
 
 figure:hover .overlay, 
@@ -314,11 +329,17 @@ figure:hover .overlay-first {
     list-style: none;
     align-items: center;
     max-width: 100px;
+    transition: all .2s ease-in-out;
 }
-
 
 .contact-icons li a img {
     width: 100%;
+}
+
+/* Social Selectors */
+
+.contact-icons li:hover {
+    transform: scale(1.2);
 }
 
 /* Footer */
@@ -332,19 +353,15 @@ footer {
     color: var(--light);
 }
 
-
-
 /* Media Queries */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1092px) {
     header {
-        flex-direction: column;
-
+        flex-flow: column nowrap;
     }
 
     header h1 {
         margin: 0;
-
     }
 
     main {
